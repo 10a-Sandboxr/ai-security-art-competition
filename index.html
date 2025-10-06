@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Security Art Competition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .prize {
+            font-size: 3em;
+            font-weight: 800;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .rules {
+            list-style: none;
+            counter-reset: rule-counter;
+        }
+
+        .rules li {
+            counter-increment: rule-counter;
+            margin-bottom: 15px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .rules li::before {
+            content: counter(rule-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .upload-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px dashed #667eea;
+        }
+
+        .upload-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 15px;
+        }
+
+        .upload-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-name {
+            margin-top: 15px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .submit-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 15px;
+            display: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Security Art Competition</h1>
+            <div class="prize">$500</div>
+            <p class="subtitle">Cash Prize for the Winner</p>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2>Contest Theme</h2>
+                <p>Create original artwork that explores the intersection of artificial intelligence and security. We're looking for pieces that creatively interpret themes such as data protection, AI ethics, cybersecurity, privacy, or the future of secure AI systems.</p>
+            </div>
+
+            <div class="section">
+                <h2>Contest Rules</h2>
+                <ul class="rules">
+                    <li><strong>Original Work:</strong> All submissions must be original artwork created by the participant. AI-assisted or AI-generated art is welcome and encouraged.</li>
+                    <li><strong>Theme Relevance:</strong> Artwork must relate to AI security themes including but not limited to: cybersecurity, data privacy, AI ethics, secure systems, or digital protection.</li>
+                    <li><strong>File Format:</strong> Submit artwork as JPG, PNG, or PDF. Maximum file size: 10MB.</li>
+                    <li><strong>One Entry Per Person:</strong> Each participant may submit one artwork entry.</li>
+                    <li><strong>Rights:</strong> By submitting, you grant us the right to display your work for promotional purposes while retaining your copyright.</li>
+                    <li><strong>Deadline:</strong> All submissions must be received by the contest closing date (to be announced).</li>
+                    <li><strong>Judging:</strong> Entries will be judged on creativity, technical skill, and relevance to the AI security theme.</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <strong>Winner receives $500 cash prize!</strong> The winning artist will be announced via email and on our website.
+            </div>
+
+            <div class="section">
+                <div class="upload-section">
+                    <h2>Submit Your Artwork</h2>
+                    <p>Ready to showcase your creativity? Upload your AI security-themed artwork below.</p>
+                    <input type="file" id="fileInput" class="file-input" accept="image/*,.pdf">
+                    <button class="upload-button" onclick="document.getElementById('fileInput').click()">
+                        Choose File to Upload
+                    </button>
+                    <div id="fileName" class="file-name"></div>
+                    <button id="submitBtn" class="submit-button" onclick="submitArtwork()">Submit Artwork</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 AI Security Art Competition. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const fileNameDisplay = document.getElementById('fileName');
+        const submitBtn = document.getElementById('submitBtn');
+
+        fileInput.addEventListener('change', function(e) {
+            if (this.files && this.files[0]) {
+                const file = this.files[0];
+                const fileSize = (file.size / 1024 / 1024).toFixed(2);
+
+                if (file.size > 10 * 1024 * 1024) {
+                    alert('File size exceeds 10MB limit. Please choose a smaller file.');
+                    this.value = '';
+                    fileNameDisplay.textContent = '';
+                    submitBtn.style.display = 'none';
+                    return;
+                }
+
+                fileNameDisplay.textContent = `Selected: ${file.name} (${fileSize} MB)`;
+                submitBtn.style.display = 'inline-block';
+            }
+        });
+
+        function submitArtwork() {
+            const file = fileInput.files[0];
+            if (!file) {
+                alert('Please select a file first.');
+                return;
+            }
+
+            alert('Thank you for your submission! Your artwork has been received. You will be contacted via email regarding the results.');
+
+            fileInput.value = '';
+            fileNameDisplay.textContent = '';
+            submitBtn.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
